@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import EquipmentItem from './EquipmentItem';
 import './EquipmentItem.css';
 
@@ -9,7 +9,6 @@ const EquipmentPage = ({ equipmentData }) => {
     (item) => item.inventoryNumber === inventoryNumber
   );
 
-  // Хук useEffect вызывается всегда, до return
   useEffect(() => {
     if (equipmentItem) {
       const savedItems = JSON.parse(localStorage.getItem('viewedItems')) || [];
@@ -27,6 +26,9 @@ const EquipmentPage = ({ equipmentData }) => {
   return (
     <div>
       <EquipmentItem item={equipmentItem} />
+      <Link to="/">
+        <button className="back-button">Вернуться на главную</button>
+      </Link>
     </div>
   );
 };
