@@ -1,0 +1,68 @@
+.equipment-card {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    flex-wrap: wrap; /* Разрешаем элементы переходить на новую строку */
+  }
+  
+  .equipment-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 16px;
+  }
+  
+  .equipment-details {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center; /* Центрирование контента по вертикали */
+  }
+  
+  .equipment-details h2 {
+    margin: 11px 0 8px;
+  }
+  
+  .equipment-details samp {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  
+  .App {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) { /* Для устройств с шириной экрана до 768px (например, мобильные телефоны) */
+    .equipment-card {
+      flex-direction: column; /* Режим столбца, чтобы элементы шли друг под другом */
+      align-items: center; /* Выравнивание по центру */
+      padding: 10px;
+    }
+  
+    .equipment-image {
+      width: 100%; /* Изображение растягивается на 100% ширины карточки */
+      height: auto; /* Высота пропорциональна ширине */
+      margin-right: 0;
+      margin-bottom: 16px; /* Отступ снизу для разделения */
+    }
+  
+    .equipment-details {
+      align-items: center; /* Центрирование текста */
+      text-align: center; /* Текст по центру */
+    }
+  }
+  

@@ -1,7 +1,18 @@
+body {
+  background-color: #a4c2a2; /* Устанавливаем цвет фона */
+  margin: 0; /* Убираем отступы по умолчанию */
+}
 .App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
   text-align: center;
 }
-
+h2 {
+  margin-bottom: 24px;
+  text-align: left;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +46,41 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.reset-button {
+  background-color: #353a49; /* Зеленый цвет фона */
+  color: white; /* Белый цвет текста */
+  font-size: 16px; /* Размер шрифта */
+  padding: 12px 24px; /* Отступы вокруг текста */
+  border: none; /* Убираем стандартную рамку */
+  border-radius: 8px; /* Скругление углов */
+  cursor: pointer; /* Курсор при наведении */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+  transition: background-color 0.3s, transform 0.3s; /* Плавный переход */
+}
+
+.reset-button:hover {
+  background-color: #606984; /* Более темный зеленый при наведении */
+  transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+
+.reset-button:active {
+  background-color: #518c3a; /* Еще более темный зеленый при нажатии */
+  transform: scale(1); /* Убираем увеличение при нажатии */
+}
+
+.reset-button:focus {
+  outline: none; /* Убираем стандартную обводку */
+  box-shadow: 0 0 0 3px rgba(115, 198, 109, 0.5); /* Обводка при фокусе */
+}
+
+.inventory-progress {
+  margin-top: 20px;
+  font-size: 30px;
+  color: #333;
+}
+
+.inventory-progress p {
+  font-weight: bold;
 }
